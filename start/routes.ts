@@ -20,10 +20,6 @@
 
 import Route from "@ioc:Adonis/Core/Route";
 
-Route.get("/", async ({ response }) => {
-  response.redirect().toPath("docs/index.html");
-});
-
 // Authentication Endpoint
 Route.group(() => {
   Route.post("/register", "AuthController.register").as("auth.register");
