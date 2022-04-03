@@ -1,9 +1,5 @@
 import Route from "@ioc:Adonis/Core/Route";
 
-Route.get("/", async ({ response }) => {
-  response.redirect().toPath("/docs/");
-});
-
 Route.group(() => {
   Route.post("/register", "AuthController.register").as("user.register");
   Route.post("/login", "AuthController.login").as("user.login");
